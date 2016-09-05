@@ -10,6 +10,7 @@ public class Tank {
 	public static final int HEIGHT = 30;
 	
 	private TankClient tc;
+	private boolean enemy;
 	
 	private int x, y;
 	private boolean left = false;
@@ -23,19 +24,21 @@ public class Tank {
 	private Direction dir = Direction.STOP;
 	private Direction shooter = Direction.D;
 	
-	public Tank(int x, int y) {
+	public Tank(int x, int y, boolean enemy) {
 		this.x = x;
 		this.y = y;
+		this.enemy = enemy;
 	}
 	
-	public Tank(int x, int y, TankClient tc) {
-		this(x,y);
+	public Tank(int x, int y, boolean enemy, TankClient tc) {
+		this(x,y, enemy);
 		this.tc = tc;
 	}
 	
 	public void draw (Graphics g) {
 		Color c = g.getColor();
-		g.setColor(Color.RED);
+		if(enemy) g.setColor(Color.BLUE);
+		else g.setColor(Color.RED);
 		g.fillOval(x, y, WIDTH, HEIGHT);
 		g.setColor(c);
 		

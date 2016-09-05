@@ -8,7 +8,9 @@ public class TankClient extends Frame{
 	public static final int SCREEN_WIDTH = 800;
 	public static final int SCREEN_HEIGHT = 600;
 	
-	Tank myTank = new Tank (50 ,50, this);
+	Tank myTank = new Tank (50 ,50, false, this);
+	Tank enemyTank = new Tank(100, 100, true, this);
+	
 	List<Missile> missiles = new ArrayList<Missile>();
 	
 	Missile m = null;
@@ -22,6 +24,7 @@ public class TankClient extends Frame{
 		}
 
 		myTank.draw(g);
+		enemyTank.draw(g);
 	}
 	
 	// double buffer, but not important actually
