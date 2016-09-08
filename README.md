@@ -2,10 +2,14 @@
 
 An interesting and classic game of tanks, enjoy :P
 
+
+
 Instructions:
+
 1. Open TankWar_2.5 folder
 2. Download world_of_tanks.jar
 3. Open it and enjoy
+
 
 
 
